@@ -1,0 +1,24 @@
+# Generate basic LDES and members.
+# Members are only generated when temperature changes for a sensor.
+
+prefixes:
+  ex: http://example.org/
+
+sources:
+  data-source: [readings.csv~csv]
+
+mappings:
+  temperature-reading:
+    sources: data-source
+    subjects:
+      - value: ex:$(SensorID)
+        targets:
+          - [ out.ttl~void, turtle ]
+        ldes:
+          watchedProperties: [$(Timestamp), $(Temperature)]
+          timestampPath: [ex:ts]
+
+    po:
+      - [a, ex:Thermometer]
+      - [ex:temp, $(Temperature)]
+      - [ex:ts, $(Timestamp), xsd:dateTime]
