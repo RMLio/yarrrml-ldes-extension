@@ -11,7 +11,7 @@ to generate necessary LDES members and metadata.
 ## Example data
 We will explain the different options for generating LDES by showing some examples. The YARRRML mappings and output
 are abbreviated (prefixes and sources are omitted) to focus on the relevant parts, but the complete
-examples can be found [here](test/ldes).
+examples can be found [here](ldes).
 
 All examples use the same input data: temperature readings from two sensors:
 
