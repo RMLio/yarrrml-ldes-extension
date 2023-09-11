@@ -2,8 +2,8 @@
 
 We added an extension to YARRRML to generate RML that generates a Linked Data Event Stream
 ([LDES](https://semiceu.github.io/LinkedDataEventStreams/)).
-LDES specifies how to model and publish changes in documents as a stream of events
-Each event, called *member* in LDES speak, is a version of an original document. 
+LDES specifies how to model and publish changes in documents as a stream of events.
+Each event, called *member* in LDES speak, is a version of an original document.
 
 We provide an `ldes` key in `subjects` mappings
 to generate necessary LDES members and metadata.
